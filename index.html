@@ -57,7 +57,7 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 150px;
             width: auto;
             animation: bounce 3s ease-in-out infinite;
         }
@@ -90,11 +90,17 @@
             font-weight: 600;
             transition: all 0.3s;
             margin-left: auto;
+            cursor: pointer;
+            user-select: all;
         }
 
         .server-button:hover {
             background: #3b82f6;
             transform: scale(1.05);
+        }
+
+        .server-button:active {
+            background: #2563eb;
         }
 
         .hero-content {
@@ -198,15 +204,15 @@
         }
 
         .character:nth-child(1) {
-            background-image: url('https://mc-heads.net/body/steve/150');
+            background-image: url('server-image1.jpg');
         }
 
         .character:nth-child(2) {
-            background-image: url('https://mc-heads.net/body/alex/150');
+            background-image: url('server-image2.jpg');
         }
 
         .character:nth-child(3) {
-            background-image: url('https://mc-heads.net/body/herobrine/150');
+            background-image: url('server-image3.jpg');
         }
 
         .features {
@@ -315,14 +321,29 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#wiki">Wiki</a></li>
-                <li><a href="#shop">Shop</a></li>
+                <li><a href="wiki.html">Wiki</a></li>
+                <li><a href="shop.html">Shop</a></li>
             </ul>
             <div class="logo">
                 <img src="logo.png" alt="HopeMC Logo">
             </div>
-            <div class="server-button">HopeMc.de</div>
+            <div class="server-button" onclick="copyServerIP()" title="Klicken zum Kopieren">HopeMc.de</div>
         </nav>
+
+        <script>
+        function copyServerIP() {
+            navigator.clipboard.writeText('HopeMc.de').then(() => {
+                const btn = document.querySelector('.server-button');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Kopiert!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+        </script>
 
         <div class="hero-content">
             <div class="hero-text">
