@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - HopeMC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #1a1f3a 0%, #0f1729 50%, #1a2847 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 50px;
+            position: relative;
+            z-index: 10;
+            gap: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo img {
+            height: 150px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin-right: auto;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .server-button {
+            background: rgba(59, 130, 246, 0.2);
+            border: 2px solid #3b82f6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-left: auto;
+            cursor: pointer;
+            user-select: all;
+        }
+
+        .server-button:hover {
+            background: #3b82f6;
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 100px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h1 {
+            font-size: 48px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0c4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .content-box h2 {
+            color: #3b82f6;
+            font-size: 28px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .content-box h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-box p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .content-box strong {
+            color: #3b82f6;
+        }
+
+        footer {
+            background: linear-gradient(180deg, #0f1729 0%, #1a1f3a 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 50px 30px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                position: relative;
+                left: 0;
+                transform: none;
+                order: -1;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .section {
+                padding: 50px 20px;
+            }
+
+            .section-header h1 {
+                font-size: 36px;
+            }
+
+            .content-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wiki.html">Wiki</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+        <div class="logo">
+            <img src="logo.png" alt="HopeMC Logo">
+        </div>
+        <div class="server-button" onclick="copyServerIP()" title="Klicken zum Kopieren">HopeMc.de</div>
+    </nav>
+
+    <div class="section">
+        <div class="section-header">
+            <h1>📋 IMPRESSUM</h1>
+        </div>
+
+        <div class="content-box">
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+                <strong>Betreiber:</strong><br>
+                [Dein Name / Firmenname]<br>
+                [Straße und Hausnummer]<br>
+                [PLZ und Ort]<br>
+                [Land]
+            </p>
+
+            <h2>Kontakt</h2>
+            <p>
+                <strong>E-Mail:</strong> kontakt@hopemc.de<br>
+                <strong>Discord:</strong> [Discord Server Link]
+            </p>
+
+            <h2>Verantwortlich für den Inhalt</h2>
+            <p>
+                <strong>Verantwortlich nach § 55 Abs. 2 RStV:</strong><br>
+                [Dein Name]<br>
+                [Adresse wie oben]
+            </p>
+
+            <h2>Haftungsausschluss</h2>
+            <p>
+                <strong>Haftung für Inhalte:</strong><br>
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+            </p>
+
+            <p>
+                <strong>Haftung für Links:</strong><br>
+                Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+
+            <h2>Urheberrecht</h2>
+            <p>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+
+            <h2>Minecraft & Mojang</h2>
+            <p>
+                HopeMC ist nicht mit Mojang Studios oder Microsoft verbunden und wird nicht von ihnen unterstützt. Minecraft ist eine Marke von Mojang Studios.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="HopeMC Logo">
+            </div>
+            <div class="footer-links">
+                <a href="partner.html">Partner</a>
+                <a href="team.html">Team</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+            </div>
+            <div class="footer-copyright">
+                Copyright © 2026 HopeMC®<br>
+                We are not affiliated with Mojang, AB.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyServerIP() {
+            navigator.clipboard.writeText('HopeMc.de').then(() => {
+                const btn = document.querySelector('.server-button');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Kopiert!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
