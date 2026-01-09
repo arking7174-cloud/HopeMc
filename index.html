@@ -572,7 +572,7 @@
 
     </div> <!-- Ende von features -->
 
-<footer>
+    <footer>
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="logo.png" alt="HopeMC Logo">
@@ -589,5 +589,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function copyServerIP() {
+            navigator.clipboard.writeText('HopeMc.de').then(() => {
+                const btn = document.querySelector('.server-button');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Kopiert!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
